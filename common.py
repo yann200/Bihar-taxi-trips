@@ -26,7 +26,6 @@ RANDOM_STATE = int(config.get("ML", "RANDOM_STATE"))
 # SQLite requires the absolute path
 # DB_PATH = os.path.abspath(DB_PATH)
 DB_PATH = os.path.join(ROOT_DIR, os.path.normpath(DB_PATH))
-print(DB_PATH)
 
 def preprocess_data(X):
     print(f"Preprocessing data")

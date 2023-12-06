@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error
 import common
 
 def load_test_data(path):
-    print(f"Reading test data from the database: {common.DB_PATH}")
+    print(f"Reading test data from the database: {path}")
     con = sqlite3.connect(path)
     data_test = pd.read_sql('SELECT * FROM test', con)
     con.close()

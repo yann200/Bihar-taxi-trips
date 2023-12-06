@@ -6,7 +6,7 @@ from sklearn.metrics import mean_squared_error
 import common
 
 def load_train_data(path):
-    print(f"Reading train data from the database: {common.DB_PATH}")
+    print(f"Reading train data from the database: {path}")
     con = sqlite3.connect(path)
     data_train = pd.read_sql('SELECT * FROM train', con)
     con.close()
