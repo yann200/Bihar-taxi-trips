@@ -15,7 +15,7 @@ permissions:
 jobs:
   build:
 
-    # Change to Windows runner
+    # Run on Windows
     runs-on: windows-latest
 
     steps:
@@ -31,7 +31,8 @@ jobs:
         pip install flake8 pytest
         # Install pywin32 for Windows systems
         pip install pywin32==305
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        # Check if requirements.txt exists and install dependencies using PowerShell syntax
+        if (Test-Path "requirements.txt") { pip install -r requirements.txt }
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -41,4 +42,5 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
 
