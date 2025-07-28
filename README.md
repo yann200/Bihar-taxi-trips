@@ -1,3 +1,3 @@
-# Diabetes
+# Taxi Trips
 
-Example of separation of data, training, and inference logic.
+A partir de differents modeles de ML, ce projet vise a predire la duree moyenne d'un deplacement en taxi dans la ville de NewYork
